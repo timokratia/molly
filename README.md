@@ -4,6 +4,7 @@
 Hard code a functioning layout and components, for rewriting it into a Zola theme later.
 
 ## Repo structure
+``` bash
 ├── sass
 │   ├── _tufte.scss
 │   ├── molly.scss
@@ -16,3 +17,4 @@ Hard code a functioning layout and components, for rewriting it into a Zola them
 │   ├── molly.css
 │── .gitignore
 └── README.md
+```
