@@ -14,12 +14,12 @@
     </title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ get_url(path="tufte.css", trailing_slash=false) }}" />
+    <link rel="stylesheet" href="{{ get_url(path="molly.css", trailing_slash=false) }}" />
   </head>
   <body>
     <div class="page">
       <!-- ==== START MASTHEAD ==== -->
-      <header role="banner">
+      <header class="masthead" role="banner">
         <nav role="navigation">
 	  <ul>
 	    <li><a href="/">Home</a></li>
@@ -27,6 +27,7 @@
 	    <li><a href="/">Contact</a></li>
 	  </ul>
         </nav>
+        <hr />
       </header>
       <!-- end masthead -->
 
@@ -35,7 +36,7 @@
         <!-- ==== START MAIN ==== -->
         <main role="main">
           {% block content %}
-          This is main.
+          <p>Welcome to my website!</p>
           {% endblock content %}
         </main>
         <!-- end main -->
