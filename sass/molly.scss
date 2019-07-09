@@ -1,1 +1,80 @@
-@import 'tufte';
+@import "_tufte";
+
+.wrapper {
+    display: grid;
+}
+
+.masthead {
+    display: grid;
+
+    /* Decrease top blockquote margin */
+    div.epigraph > blockquote {
+        margin: 2em;
+    }
+    
+    /* Reset the margin of top quote */
+    div.epigraph {
+        margin: 0;
+    }
+
+    .top-nav > ul {
+        
+        /* Override tufte.css link underline */
+        a:link, .tufte-underline, .hover-tufte-underline:hover {
+            text-shadow: 0.03em 0 #ffefcc, -0.03em 0 #ffefcc, 0 0.03em #ffefcc, 0 -0.03em #ffefcc, 0.06em 0 #ffefcc, -0.06em 0 #ffefcc, 0.09em 0 #ffefcc, -0.09em 0 #ffefcc, 0.12em 0 #ffefcc, -0.12em 0 #ffefcc, 0.15em 0 #ffefcc, -0.15em 0 #ffefcc;
+            background-position: 0% 93%, 100% 93%, 0% 93%;
+            background: none #ffefcc;
+            color: #111;
+        }
+
+        max-width: 875px;
+        background-color: #ffefcc;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(7, minmax(175px, auto));
+        align-items: center;
+        justify-content: stretch;
+        li {
+            padding: 5px 10px;
+            display: grid;
+        }
+    }
+}
+
+/* Override tufte.css h1 margin */
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Override tufte.css article padding */
+article {
+    padding: 1em 0;
+}
+
+.post-list {
+    p {
+        margin: 0;
+    }
+
+    grid-template-rows: auto;
+    grid-gap: 0;
+    max-width: 875px;
+
+    ul {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 4fr 2fr 1fr;
+        li {
+            list-style-type: none;
+            grid-column: 1;
+        }
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.8rem;
+}
