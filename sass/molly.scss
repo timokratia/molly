@@ -9,10 +9,9 @@
 
     /* Decrease top blockquote margin */
     div.epigraph > blockquote {
-        margin: 2em;
+        margin: 1.5em 2em;
     }
     
-    /* Reset the margin of top quote */
     div.epigraph {
         margin: 0;
     }
@@ -21,14 +20,14 @@
         
         /* Override tufte.css link underline */
         a:link, .tufte-underline, .hover-tufte-underline:hover {
-            text-shadow: 0.03em 0 #ffefcc, -0.03em 0 #ffefcc, 0 0.03em #ffefcc, 0 -0.03em #ffefcc, 0.06em 0 #ffefcc, -0.06em 0 #ffefcc, 0.09em 0 #ffefcc, -0.09em 0 #ffefcc, 0.12em 0 #ffefcc, -0.12em 0 #ffefcc, 0.15em 0 #ffefcc, -0.15em 0 #ffefcc;
+            text-shadow: 0.03em 0 #d9ded2, -0.03em 0 #d9ded2, 0 0.03em #d9ded2, 0 -0.03em #d9ded2, 0.06em 0 #d9ded2, -0.06em 0 #d9ded2, 0.09em 0 #d9ded2, -0.09em 0 #d9ded2, 0.12em 0 #d9ded2, -0.12em 0 #d9ded2, 0.15em 0 #d9ded2, -0.15em 0 #d9ded2;
             background-position: 0% 93%, 100% 93%, 0% 93%;
-            background: none #ffefcc;
+            background: none #d9ded2;
             color: #111;
         }
 
         max-width: 875px;
-        background-color: #ffefcc;
+        background-color: #d9ded2;
         margin: 0;
         padding: 0;
         display: grid;
@@ -64,6 +63,7 @@ article {
 
     ul {
         margin: 0;
+        padding: 0;
         display: grid;
         grid-template-columns: 4fr 2fr 1fr;
         li {
@@ -73,8 +73,26 @@ article {
     }
 }
 
+.post-date {
+    color: #696969;
+}
+
+.post-year {
+    grid-column: 2;
+    justify-self: end;
+    font-size: 1.2em;
+    color: #696969;
+}
+
 .footer {
+    max-width: 875px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 1.8rem;
+    grid-template-columns: 4fr 2fr 1fr;
+}
+
+.footer-redirect {
+    grid-column: 2;
+    justify-self: end;
+    font-style: italic;
+    font-size: 1.2rem;
 }

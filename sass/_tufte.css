@@ -3,41 +3,37 @@
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
 
-/* Define a font-face mixin */
-@mixin font-face($family, $style: normal, $weight: normal) {
-    /* Define file path based on font family, weight, and style */
-    $path: null;
-    @if $family == et-book-roman-old-style {
-        $path: et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures;
-    } @else { // $family = et-book
-        @if $style == normal and $weight == normal {
-            $path: et-book/et-book-roman-line-figures/et-book-roman-line-figures;
-        } @else if $style == italic {
-            $path: et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures;
-        } @else if $weight == bold {
-            $path: et-book/et-book-bold-line-figures/et-book-bold-line-figures;
-        }
-    }
-    @font-face {
-        font-family: quote($family);
-        src: url(quote($path) + ".eot");
-        src: url(quote($path) + ".eot?#iefix") format("embedded-opentype"),
-             url(quote($path) + ".woff") format("woff"),
-             url(quote($path) + ".ttf") format("truetype"),
-             url(quote($path) + ".svg#etbookromanosf") format("svg");
-        font-weight: unquote($weight);
-        font-style: unquote($style);
-    }
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal; 
 }
 
-/* Use font-face mixin */
-@include font-face(et-book);
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: italic; 
+}
 
-@include font-face(et-book, $style: italic);
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: bold;
+    font-style: normal; 
+}
 
-@include font-face(et-book, $weight: bold);
-
-@include font-face(et-book-roman-old-style);
+@font-face {
+    font-family: "et-book-roman-old-style";
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal; 
+}
 
 /* Tufte CSS styles */
 html {
@@ -316,7 +312,7 @@ div.table-wrapper {
     letter-spacing: .03em; 
 }
 
-code {
+code, pre > code {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 1.0rem;
     line-height: 1.42;
@@ -338,14 +334,15 @@ h3 > code {
     font-size: 1rem; 
 }
 
-pre.code {
+pre > code {
     font-size: 0.9rem;
     width: 52.5%;
     margin-left: 2.5%;
-    overflow-x: auto; 
+    overflow-x: auto;
+    display: block;
 }
 
-pre.code.fullwidth {
+pre.fullwidth > code {
     width: 90%; 
 }
 
@@ -400,7 +397,7 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%; 
     }
     
-    pre.code {
+    pre > code {
         width: 97%; 
     }
 

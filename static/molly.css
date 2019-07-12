@@ -1,8 +1,5 @@
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
-/* Define a font-face mixin */
-/* Use font-face mixin */
-/* Define file path based on font family, weight, and style */
 @font-face {
   font-family: "et-book";
   src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
@@ -10,7 +7,6 @@
   font-weight: normal;
   font-style: normal;
 }
-/* Define file path based on font family, weight, and style */
 @font-face {
   font-family: "et-book";
   src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
@@ -18,7 +14,6 @@
   font-weight: normal;
   font-style: italic;
 }
-/* Define file path based on font family, weight, and style */
 @font-face {
   font-family: "et-book";
   src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
@@ -26,7 +21,6 @@
   font-weight: bold;
   font-style: normal;
 }
-/* Define file path based on font family, weight, and style */
 @font-face {
   font-family: "et-book-roman-old-style";
   src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
@@ -469,10 +463,9 @@ table {
 .masthead {
   display: grid;
   /* Decrease top blockquote margin */
-  /* Reset the margin of top quote */
 }
 .masthead div.epigraph > blockquote {
-  margin: 2em;
+  margin: 1.5em 2em;
 }
 .masthead div.epigraph {
   margin: 0;
@@ -480,7 +473,7 @@ table {
 .masthead .top-nav > ul {
   /* Override tufte.css link underline */
   max-width: 875px;
-  background-color: #ffefcc;
+  background-color: #d9ded2;
   margin: 0;
   padding: 0;
   display: grid;
@@ -489,9 +482,9 @@ table {
   justify-content: stretch;
 }
 .masthead .top-nav > ul a:link, .masthead .top-nav > ul .tufte-underline, .masthead .top-nav > ul .hover-tufte-underline:hover {
-  text-shadow: 0.03em 0 #ffefcc, -0.03em 0 #ffefcc, 0 0.03em #ffefcc, 0 -0.03em #ffefcc, 0.06em 0 #ffefcc, -0.06em 0 #ffefcc, 0.09em 0 #ffefcc, -0.09em 0 #ffefcc, 0.12em 0 #ffefcc, -0.12em 0 #ffefcc, 0.15em 0 #ffefcc, -0.15em 0 #ffefcc;
+  text-shadow: 0.03em 0 #d9ded2, -0.03em 0 #d9ded2, 0 0.03em #d9ded2, 0 -0.03em #d9ded2, 0.06em 0 #d9ded2, -0.06em 0 #d9ded2, 0.09em 0 #d9ded2, -0.09em 0 #d9ded2, 0.12em 0 #d9ded2, -0.12em 0 #d9ded2, 0.15em 0 #d9ded2, -0.15em 0 #d9ded2;
   background-position: 0% 93%, 100% 93%, 0% 93%;
-  background: none #ffefcc;
+  background: none #d9ded2;
   color: #111;
 }
 .masthead .top-nav > ul li {
@@ -520,6 +513,7 @@ article {
 }
 .post-list ul {
   margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 4fr 2fr 1fr;
 }
@@ -528,10 +522,28 @@ article {
   grid-column: 1;
 }
 
+.post-date {
+  color: #696969;
+}
+
+.post-year {
+  grid-column: 2;
+  justify-self: end;
+  font-size: 1.2em;
+  color: #696969;
+}
+
 .footer {
+  max-width: 875px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-size: 1.8rem;
+  grid-template-columns: 4fr 2fr 1fr;
+}
+
+.footer-redirect {
+  grid-column: 2;
+  justify-self: end;
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=molly.css.map */
