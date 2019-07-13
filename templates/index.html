@@ -19,7 +19,7 @@
   <body>
     <div class="page">
       <!-- ==== START MASTHEAD ==== -->
-      <header class="masthead" role="banner">
+      <header role="banner">
         <nav role="navigation">
 	  <ul>
 	    <li><a href="/">Home</a></li>
@@ -32,17 +32,25 @@
       <!-- end masthead -->
 
       <!-- ==== START PRIMARY CONTAINER ==== -->
-      <div class="container">
+      <div>
         <!-- ==== START MAIN ==== -->
         <main role="main">
           {% block content %}
           <p>Welcome to my website!</p>
+          {% for page in section.pages | reverse %}
+          <h1>
+            <a href="{{ page.permalink }}">
+              {{ page.title }}
+            </a>
+          </h1>
+          <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+          {% endfor %}
           {% endblock content %}
         </main>
         <!-- end main -->
 
         <!-- ==== START SIDEBAR ==== -->
-        <div class="sidebar">
+        <div>
           <p>This is sidebar.</p>
         </div>
         <!-- end sidebar -->
@@ -50,8 +58,8 @@
       <!-- end primary container -->
 
       <!-- ==== START PAGE FOOTER ==== -->
-      <footer role="contentinfo" class="footer">
-        This is footer.
+      <footer role="contentinfo">
+        <p>This is footer.</p>
       </footer>
       <!-- end footer -->
     </div>
