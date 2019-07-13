@@ -9,3 +9,19 @@ A blog theme for zola, based on [Tufte CSS](https://edwardtufte.github.io/tufte-
 - [ ] Define base layout
 - [ ] Add components
 - [ ] TBD
+
+## Repo structure
+``` bash
+├── sass
+│   ├── _tufte.scss
+│   ├── molly.scss
+├── templates
+│   ├── base.html
+│   ├── index.html
+│   ├── page.html
+├── static
+│   │   ├── img
+│   ├── molly.css
+│── .gitignore
+└── README.md
+```
