@@ -1,7 +1,2 @@
-{% macro sidenote(unique_id, sidenote_body) %}
-<label class="margin-toggle sidenote-number" for="sn-{{unique_id}}"></label>
-<input id="sn-{{unique_id}}" class="margin-toggle" type="checkbox" />
-<span class="sidenote">
-  {{sidenote_body}}
-</span>
-{% endmacro sidenote %}
+{%- macro sidenote(unique_id, sidenote_body) -%}
+<label class="margin-toggle sidenote-number" for="sn-{{unique_id}}"></label><input id="sn-{{unique_id}}" class="margin-toggle" type="checkbox" /><span class="sidenote">{{sidenote_body}}</span>{%- endmacro sidenote -%}
