@@ -10,3 +10,18 @@
   {{ page.content | safe }}
 </article>
 {% endblock content %}
+
+{% block sidebar %}
+<aside class="post-list">
+  <hr />
+  <p>More posts:</p>
+  <ul>
+    <p class="post-year">2019</p>
+    <li><span class="post-title">Post 1</span> <span class="post-date">Date</span></li>
+    <li><span class="post-title">Post 2</span> <span class="post-date">Date</span></li>
+    <li><span class="post-title">Post 3</span> <span class="post-date">Date</span></li>
+    <li><span class="post-title">Post 4</span> <span class="post-date">Date</span></li>
+    <li><span class="post-title">Post 5</span> <span class="post-date">Date</span></li>
+  </ul>
+</aside>
+{% endblock sidebar %}

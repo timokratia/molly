@@ -304,7 +304,7 @@ div.table-wrapper {
   letter-spacing: 0.03em;
 }
 
-code {
+code, pre > code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 1rem;
   line-height: 1.42;
@@ -327,14 +327,15 @@ h3 > code {
   font-size: 1rem;
 }
 
-pre.code {
+pre > code {
   font-size: 0.9rem;
   width: 52.5%;
   margin-left: 2.5%;
   overflow-x: auto;
+  display: block;
 }
 
-pre.code.fullwidth {
+pre.fullwidth > code {
   width: 90%;
 }
 
@@ -390,7 +391,7 @@ section > table {
     width: 100%;
   }
 
-  pre.code {
+  pre > code {
     width: 97%;
   }
 

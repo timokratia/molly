@@ -1,10 +1,17 @@
 +++
-title = "About"
-author = "Zekun"
+title = "about"
+
+template = "base.html"
+
+[extra]
+banner_quote = "The unlived life is not worth examining."
+banner_footer = "...and other thoughts of mine."
 +++
 
-I enjoy server-side programming in Python and Haskell, and am ready to learn new technologies for the right task.
-
-My research interests in information science include digital preservation, and information retrieval for research data.
-
-I am also a heavy tea drinker and an avid [The Binding of Isaac](http://bindingofisaac.com/) player.
+## me
+Nullam eu ante vel est convallis dignissim{% sidenote(unique_id="convallis dignissim") %}This is a test sidenote.{% end %}.
+Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.
+Nunc porta vulputate tellus.
+Nunc rutrum turpis sed pede.
+Sed bibendum.Aliquam posuere.
+Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.

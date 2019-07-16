@@ -1,10 +1,13 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zekun's Blog</title>
-    <link rel="stylesheet" href="../static/molly.css" />
+    <title>
+      {% block title %}{{ config.title }}{% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{{ get_url(path="molly.css", trailing_slash=false) }}" />
   </head>
   <body>
     <!-- ==== START PAGE WRAPPER ==== -->
@@ -16,9 +19,19 @@
         <div class="epigraph">
           <blockquote>
             <p>
+              {% if page.extra.banner_quote %}
+              {{ page.extra.banner_quote }}
+              {% else %}
               The unlived life is not worth examining.
+              {% endif %}
             </p>
-            <footer>...and other thoughts of mine.</footer>
+            <footer>
+              {% if page.extra.banner_footer %}
+              {{ page.extra.banner_footer }}
+              {% else %}
+              ...and other thoughts of mine.
+              {% endif %}
+            </footer>
           </blockquote>
         </div>
 
@@ -38,32 +51,19 @@
 
         <!-- ==== START MAIN ==== -->
         <main class="main" role="main">
+          {% block content %}
           <article>
-            <h1>This is my first post!</h1>
-            <p class="subtitle">Zekun Hu</p>
             <section>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.</p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.</p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.</p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.</p>
+              {{ page.content | safe }}
             </section>
           </article>
+          {% endblock content %}
         </main>
         <!-- end main -->
 
         <!-- ==== START SIDEBAR ==== -->
-        <aside class="post-list">
-          <hr />
-          <p>More posts:</p>
-          <ul>
-            <p class="post-year">2019</p>
-            <li><span class="post-title">Post 1</span> <span class="post-date">Date</span></li>
-            <li><span class="post-title">Post 2</span> <span class="post-date">Date</span></li>
-            <li><span class="post-title">Post 3</span> <span class="post-date">Date</span></li>
-            <li><span class="post-title">Post 4</span> <span class="post-date">Date</span></li>
-            <li><span class="post-title">Post 5</span> <span class="post-date">Date</span></li>
-          </ul>
-        </aside>
+        {% block sidebar %}
+        {% endblock sidebar %}
         <!-- end sidebar -->
 
       </div>

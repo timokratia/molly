@@ -1,6 +1,7 @@
 +++
-title = "Welcome to my site!"
-author = "Zekun"
-+++
+title = ""
+author = ""
 
-Welcome to my site!
+# Redirect to about page
+redirect_to = "about"
++++
