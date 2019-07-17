@@ -13,7 +13,9 @@ A blog theme for zola, based on [Tufte CSS](https://edwardtufte.github.io/tufte-
 
 ## Credits
 [Tufte CSS](https://edwardtufte.github.io/tufte-css/)
+
 Gertjan van den Burg's [blog post](https://gertjanvandenburg.com/blog/how_i_made/)
+
 ayekat's [blog post](http://ayekat.ch/blog/tufte-css) as well as site design
 
 ## Repo structure
