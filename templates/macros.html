@@ -1,3 +1,4 @@
+<!-- Support sidenote and marginal note of tufte.css -->
 {%- macro sidenote(unique_id, sidenote_body) -%}
 <label class="margin-toggle sidenote-number" for="sn-{{unique_id}}"></label><input id="sn-{{unique_id}}" class="margin-toggle" type="checkbox" /><span class="sidenote">{{sidenote_body}}</span>
 {%- endmacro sidenote -%}
@@ -5,3 +6,14 @@
 {%- macro marginnote(unique_id, marginnote_body) -%}
 <label class="margin-toggle" for="mn-{{unique_id}}">&#8853;</label><input id="mn-{{unique_id}}" class="margin-toggle" type="checkbox" /><span class="marginnote">{{marginnote_body}}</span>
 {%- endmacro marginnote -%}
+
+<!-- Support section for tufte.css -->
+{%- macro section_begin(header) -%}
+<h2>{{header}}</h2>
+{%- endmacro section_begin -%}
+
+{%- macro section_con(header) -%}
+</section>
+<section>
+<h2>{{header}}</h2>
+{%- endmacro section_con -%}

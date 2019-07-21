@@ -7,7 +7,7 @@ A blog theme for zola, based on [Tufte CSS](https://edwardtufte.github.io/tufte-
 ## TODO
 - [x] Define base layout
 - [x] Support sidenotes and marginal notes
-- [ ] Add support for sections
+- [x] Support sections
 - [ ] Add post list
 - [ ] Add internal links
 
