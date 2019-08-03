@@ -1,12 +1,11 @@
 +++
-title = "Welcome to my website!"
+title = "This is an earlier post"
 author = "Zekun"
-
-template="base.html"
+template = "base.html"
 
 [extra]
-banner_quote = "Welcome to my new website!"
-banner_footer = "This is work in progress."
+banner_quote = "This is the quote of the earlier post."
+banner_footer = "Quoted from Mr. Warlock."
 +++
 
 This is a placeholder post.
@@ -27,4 +26,3 @@ Now that we know who you are, I know who I am. I'm not a mistake! It all makes s
 {{ section_con(header="too good") }}
 
 Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
-
