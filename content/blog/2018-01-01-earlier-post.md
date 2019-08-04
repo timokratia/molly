@@ -1,11 +1,10 @@
 +++
 title = "This is an earlier post"
-author = "Zekun"
-template = "base.html"
 
 [extra]
 banner_quote = "This is the quote of the earlier post."
 banner_footer = "Quoted from Mr. Warlock."
+author = "Zekun"
 +++
 
 This is a placeholder post.

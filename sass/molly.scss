@@ -1,4 +1,9 @@
+/* Import base CSS style */
 @import "_tufte";
+
+/* Declare variables */
+$banner-green: #d9ded2;
+$dark-green: #608376;
 
 .wrapper {
     display: grid;
@@ -20,14 +25,14 @@
         
         /* Override tufte.css link underline */
         a:link, .tufte-underline, .hover-tufte-underline:hover {
-            text-shadow: 0.03em 0 #d9ded2, -0.03em 0 #d9ded2, 0 0.03em #d9ded2, 0 -0.03em #d9ded2, 0.06em 0 #d9ded2, -0.06em 0 #d9ded2, 0.09em 0 #d9ded2, -0.09em 0 #d9ded2, 0.12em 0 #d9ded2, -0.12em 0 #d9ded2, 0.15em 0 #d9ded2, -0.15em 0 #d9ded2;
+            text-shadow: 0.03em 0 $banner-green, -0.03em 0 $banner-green, 0 0.03em $banner-green, 0 -0.03em $banner-green, 0.06em 0 $banner-green, -0.06em 0 $banner-green, 0.09em 0 $banner-green, -0.09em 0 $banner-green, 0.12em 0 $banner-green, -0.12em 0 $banner-green, 0.15em 0 $banner-green, -0.15em 0 $banner-green;
             background-position: 0% 93%, 100% 93%, 0% 93%;
-            background: none #d9ded2;
+            background: none $banner-green;
             color: #111;
         }
 
         max-width: 875px;
-        background-color: #d9ded2;
+        background-color: $banner-green;
         margin: 0;
         padding: 0;
         display: grid;
@@ -52,7 +57,20 @@ article {
     padding: 1em 0;
 }
 
+/* Post list */
 .post-list {
+    font-size: 1.3em;
+
+    ul {
+    /* Override tufte.css link underline */
+        a:link, .tufte-underline, .hover-tufte-underline:hover {
+            text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+            background-position: 0% 93%, 100% 93%, 0% 93%;
+            background: none #fffff8;
+            color: #111;
+        }
+    }
+    
     p {
         margin: 0;
     }
@@ -74,16 +92,17 @@ article {
 }
 
 .post-date {
-    color: #696969;
+    color: $dark-green;
 }
 
 .post-year {
     grid-column: 2;
     justify-self: end;
     font-size: 1.2em;
-    color: #696969;
+    color: $dark-green;
 }
 
+/* Page footer */
 .footer {
     max-width: 875px;
     display: grid;
