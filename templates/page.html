@@ -13,16 +13,16 @@
 {% endblock content %}
 
 {% block sidebar %}
-<aside class="sidebar">
+<aside id="sidebar">
   <hr />
-  <h3 class="post-date">Other posts</h3>
+  <h3 class="post-list-title">Other posts</h3>
   {% set parent_section = get_section(path="blog/_index.md") %}
   <ul>
     {% for each_page in parent_section.pages %}
     {% if page.title == each_page.title %}
     <li>{{ page.title }} <span class="post-date">{{ page.date }}</span></li>
     {% else %}
-    <li><a href="{{ each_page.permalink }}">{{ each_page.title }}</a> <span class="post-date"> {{ each_page.date }}</span></li>
+    <li><a href="{{ each_page.permalink }}"><span class="other-post">{{ each_page.title }}</span></a> <span class="post-date"> {{ each_page.date }}</span></li>
     {% endif %}
     {% endfor %}
   </ul>
