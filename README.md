@@ -5,11 +5,14 @@ A blog theme for zola, based on [Tufte CSS](https://edwardtufte.github.io/tufte-
 *This project is a work in progress.*:dog:
 
 ## TODO
-- [x] Define base layout
-- [x] Support sidenotes and marginal notes
-- [x] Support sections
-- [x] Add post list
-- [x] Add internal links
+- [x] Initial setup using Tufte.css
+    - [x] Define base layout
+    - [x] Support sidenotes and marginal notes
+    - [x] Support sections
+    - [x] Add post list
+    - [x] Add internal links
+- [ ] 2nd phase plan
+    - [ ] Add CSS Grid layout
 
 ## Credits
 [Tufte CSS](https://edwardtufte.github.io/tufte-css/)
