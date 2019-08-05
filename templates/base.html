@@ -37,9 +37,14 @@
 
         <nav role="navigation" class="top-nav">
           <ul>
-            <li><a href="#">about</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">code</a></li>
+            <li><a href="{{ config.base_url }}/about/">about</a></li>
+            <!-- Redirect to the latest post -->
+            {% set parent_section = get_section(path="blog/_index.md") %}
+            {% for each_page in parent_section.pages | reverse %}
+            <li><a href="{{ config.base_url }}/{{ each_page.path }}">blog</a></li>
+            {% break %}
+            {% endfor %}
+            <li><a href="{{ config.extra.github }}">code</a></li>
           </ul>
         </nav>
 
