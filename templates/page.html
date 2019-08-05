@@ -18,7 +18,7 @@
   <h3 class="post-list-title">Other posts</h3>
   {% set parent_section = get_section(path="blog/_index.md") %}
   <ul>
-    {% for each_page in parent_section.pages %}
+    {% for each_page in parent_section.pages | reverse %}
     {% if page.title == each_page.title %}
     <li>{{ page.title }} <span class="post-date">{{ page.date }}</span></li>
     {% else %}
