@@ -96,14 +96,18 @@ article {
 
 /* Page footer */
 .footer {
-    max-width: 875px;
-    display: grid;
-    grid-template-columns: 4fr 2fr 1fr;
-}
+    text-align: left;
 
-.footer-redirect {
-    grid-column: 2;
-    justify-self: end;
-    font-style: italic;
-    font-size: 1.2rem;
+    P {
+        font-size: small;
+        margin: 0;
+
+        /* Override tufte.css link underline */
+        a:link, .tufte-underline, .hover-tufte-underline:hover {
+            text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+            background-position: 0% 93%, 100% 93%, 0% 93%;
+            background: none #fffff8;
+            color: #111;
+        }
+    }
 }
