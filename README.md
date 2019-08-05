@@ -8,8 +8,8 @@ A blog theme for zola, based on [Tufte CSS](https://edwardtufte.github.io/tufte-
 - [x] Define base layout
 - [x] Support sidenotes and marginal notes
 - [x] Support sections
-- [ ] Add post list
-- [ ] Add internal links
+- [x] Add post list
+- [x] Add internal links
 
 ## Credits
 [Tufte CSS](https://edwardtufte.github.io/tufte-css/)
