@@ -22,14 +22,14 @@
               {% if page.extra.banner_quote %}
               {{ page.extra.banner_quote }}
               {% else %}
-              The unlived life is not worth examining.
+              {{ config.extra.global_banner_quote }}
               {% endif %}
             </p>
             <footer>
               {% if page.extra.banner_footer %}
               {{ page.extra.banner_footer }}
               {% else %}
-              ...and other thoughts of mine.
+              {{ config.extra.global_banner_footer }}
               {% endif %}
             </footer>
           </blockquote>

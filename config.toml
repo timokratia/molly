@@ -18,5 +18,7 @@ build_search_index = true
 
 [extra]
 # Put all your custom variables here
-github = "https://github.com/timokratia"
-license = "CC BY"
+github = "https://github.com/"
+license = "License Info"
+global_banner_quote = "Your default banner quote"
+global_banner_footer = "Your default banner footer"
