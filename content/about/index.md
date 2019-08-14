@@ -36,15 +36,22 @@ Nunc rutrum turpis sed pede.
 Sed bibendum.Aliquam posuere.
 Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.
 
-```sh
-#!/bin/bash
+```clj
+;; Some code examples in Clojure. This is a comment.
 
-lists=(
-    https://www.bilibili.com/video/av63643129
-    
-)
+;; applying a function to every item in the collection
+(map tufte-css blog-posts)
+;;;; if unfamiliar, see http://www.lispcast.com/annotated-map
 
-for i in "${lists[@]}"; do
-    annie -c /mnt/xSSD/Videos/0src/cookies.txt -p $i
-done
+;; side-effecty loop (unformatted, causing text overflow) - from https://clojuredocs.org/clojure.core/doseq
+(doseq [[[a b] [c d]] (map list (sorted-map :1 1 :2 2) (sorted-map :3 3 :4 4))] (prn (* b d)))
+
+;; that same side-effecty loop, formatted
+(doseq [[[a b] [c d]] (map list
+                           (sorted-map :1 1 :2 2)
+                           (sorted-map :3 3 :4 4))]
+  (prn (* b d)))
+
+;; If this proselytizing has worked, check out:
+;; http://howistart.org/posts/clojure/1
 ```
