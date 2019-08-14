@@ -24,7 +24,7 @@ Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis 
 
 {{ section_con(header="this site") }}
 
-Nullam eu ante vel est convallis dignissim{% sidenote(unique_id="convallis dignissim") %}This is a test sidenote.{% end %}.
+Nullam eu ante vel est convallis dignissim{% sidenote(unique_id="convallis dignissim") %}This is a test sidenote. This is a test sidenote. This is a test sidenote. This is a test sidenote. This is a test sidenote.{% end %}.
 Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.
 Nunc rutrum turpis sed pede.
 Sed bibendum.Aliquam posuere.
@@ -36,3 +36,15 @@ Nunc rutrum turpis sed pede.
 Sed bibendum.Aliquam posuere.
 Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.
 
+```sh
+#!/bin/bash
+
+lists=(
+    https://www.bilibili.com/video/av63643129
+    
+)
+
+for i in "${lists[@]}"; do
+    annie -c /mnt/xSSD/Videos/0src/cookies.txt -p $i
+done
+```
